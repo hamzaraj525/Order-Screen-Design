@@ -158,34 +158,33 @@ const styles = StyleSheet.create({
   amount: {
     textAlign: 'center',
     fontSize: 11,
-    color: 'black',
     marginTop: 18,
     height: 60,
     justifyContent: 'space-between',
     position: 'relative',
     right: 6,
-    color: 'black',
+    color: 'grey',
   },
   shipped: {
     textAlign: 'center',
     fontSize: 11,
-    color: 'black',
+
     marginTop: 18,
     height: 60,
     justifyContent: 'space-between',
     position: 'relative',
     right: 7,
-    color: 'black',
+    color: 'grey',
   },
   id: {
     fontSize: 11,
-    color: 'black',
+    color: 'grey',
+
     marginTop: 18,
     height: 60,
     justifyContent: 'space-between',
     position: 'relative',
     right: -9,
-    color: 'black',
   },
   header: {
     backgroundColor: '#1f8e46',
@@ -238,12 +237,11 @@ const styles = StyleSheet.create({
   },
   secondInnerText: {
     fontSize: 11,
-    color: 'black',
+    color: 'grey',
     marginTop: 18,
     height: 60,
     justifyContent: 'space-between',
     textAlign: 'center',
-    color: 'black',
   },
 
   input: {
