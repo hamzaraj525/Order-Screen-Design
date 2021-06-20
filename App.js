@@ -133,6 +133,39 @@ const DATA = [
     amount: '13000 PKR',
     key: 10,
   },
+  {
+    Id: 'ID',
+    Date: 'Date',
+    Status: 'Status',
+    Amount: 'Amount ',
+    id: '23',
+    date: '10-03-2021',
+    status: 'shipped',
+    amount: '13000 PKR',
+    key: 11,
+  },
+  {
+    Id: 'ID',
+    Date: 'Date',
+    Status: 'Status',
+    Amount: 'Amount ',
+    id: '24',
+    date: '10-03-2021',
+    status: 'shipped',
+    amount: '13000 PKR',
+    key: 12,
+  },
+  {
+    Id: 'ID',
+    Date: 'Date',
+    Status: 'Status',
+    Amount: 'Amount ',
+    id: '25',
+    date: '10-03-2021',
+    status: 'shipped',
+    amount: '13000 PKR',
+    key: 13,
+  },
 ];
 export default class App extends Component {
   constructor(props) {
@@ -141,7 +174,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{flex: 1}}>
         {/* App Bar  */}
         <Appbar.Header style={styles.header}>
           <Appbar.Action
@@ -170,6 +203,7 @@ export default class App extends Component {
           </View>
         </View>
         <FlatList
+          contentContainerStyle={{paddingBottom: 20}}
           data={DATA}
           renderItem={({item, index}) => (
             <View style={styles.alignData}>
@@ -177,11 +211,11 @@ export default class App extends Component {
                 <Text style={styles.innerText}>{item.Id} </Text>
                 <Text style={styles.innerText}> {item.Date} </Text>
                 <Text style={styles.innerText}>{item.Status} </Text>
-                <Text style={styles.innerText}> {item.Amount} </Text>
+                <Text style={styles.innerTextAmount}> {item.Amount} </Text>
               </View>
               <View style={styles.textSecond}>
                 <Text style={styles.id}>{item.id} </Text>
-                <Text style={styles.secondInnerText}> {item.date} </Text>
+                <Text style={styles.datee}> {item.date} </Text>
                 <Text style={styles.shipped}>{item.status} </Text>
                 <Text style={styles.amount}> {item.amount} </Text>
               </View>
@@ -197,33 +231,31 @@ const styles = StyleSheet.create({
   amount: {
     textAlign: 'center',
     fontSize: 11,
-    marginTop: 18,
-    height: 60,
+    marginTop: '4%',
+    height: '45%',
     justifyContent: 'space-between',
     position: 'relative',
-    right: 6,
+    right: '30%',
     color: 'grey',
   },
   shipped: {
     textAlign: 'center',
     fontSize: 11,
-
-    marginTop: 18,
-    height: 60,
+    marginTop: '4%',
+    height: '50%',
     justifyContent: 'space-between',
     position: 'relative',
-    right: 7,
+    right: '17%',
     color: 'grey',
   },
   id: {
     fontSize: 11,
     color: 'grey',
-
-    marginTop: 18,
-    height: 60,
+    marginTop: '4%',
+    height: '45%',
     justifyContent: 'space-between',
     position: 'relative',
-    right: -9,
+    right: '-35%',
   },
   header: {
     backgroundColor: '#1f8e46',
@@ -237,31 +269,23 @@ const styles = StyleSheet.create({
 
   titleText: {
     fontSize: 30,
-
     color: '#1f8e46',
-    marginStart: 4,
+    marginStart: '1%',
     fontWeight: 'bold',
   },
   alignData: {
-    padding: 18,
+    padding: '4%',
   },
 
-  TextBorder: {
-    borderWidth: 1.5,
-    marginTop: 15,
-    height: 73,
-    borderColor: '#DCDCDC',
-  },
   text: {
     borderWidth: 1.5,
-
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    height: 73,
+    height: '-5%',
     borderColor: '#DCDCDC',
   },
   textSecond: {
-    marginTop: -49,
+    marginTop: '-13%',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
   },
@@ -269,17 +293,29 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
-    marginTop: 15,
+    marginTop: '4%',
     height: 60,
     justifyContent: 'space-evenly',
+    color: 'black',
+  },
+  innerTextAmount: {
+    fontSize: 11,
+    position: 'relative',
+    right: '7%',
+    color: 'black',
+    fontWeight: 'bold',
+    marginTop: '4%',
+    height: 60,
 
     color: 'black',
   },
-  secondInnerText: {
+  datee: {
     fontSize: 11,
     color: 'grey',
-    marginTop: 18,
-    height: 60,
+    position: 'relative',
+    right: '-22%',
+    marginTop: '4%',
+    height: '45%',
     justifyContent: 'space-between',
     textAlign: 'center',
   },
@@ -291,15 +327,16 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 0,
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
-    marginTop: 9,
+    marginTop: '7%',
     borderWidth: 1,
     borderColor: '#DCDCDC',
   },
   imageStyle: {
-    padding: 10,
-    margin: 5,
-    height: 25,
-    width: 25,
+    padding: '4%',
+    margin: '3%',
+    height: '22%',
+    tintColor: 'grey',
+    width: '2%',
     resizeMode: 'stretch',
     alignItems: 'center',
   },
