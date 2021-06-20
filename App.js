@@ -332,7 +332,7 @@ const styles = StyleSheet.create({
     borderColor: '#DCDCDC',
   },
   imageStyle: {
-    padding: '4%',
+    padding: '3%',
     margin: '3%',
     height: '22%',
     tintColor: 'grey',
